@@ -12,11 +12,12 @@
             ?>
             <script>
                 alert("Welcome <?php echo $username;?>");
-                window.open("main.php","_self");
+                window.open("student.php","_self");
             </script>
             <?php
             session_start();
             $_SESSION['username'] = $username;
+            $_SESSION['identity'] = $data['ID'];
             $_SESSION['password'] = $password;
             break;
         }
@@ -25,7 +26,7 @@
         ?>
         <script>
             alert("Wrong Password");
-            window.open("index.php","_self");
+            window.open("login.php","_self");
         </script>
         <?php
     }

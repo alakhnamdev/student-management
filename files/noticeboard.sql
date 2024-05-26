@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 10, 2023 at 09:30 AM
+-- Generation Time: Jul 12, 2023 at 10:16 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -24,36 +24,33 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `logindetails`
+-- Table structure for table `noticeboard`
 --
 
-CREATE TABLE `logindetails` (
+CREATE TABLE `noticeboard` (
   `ID` int(11) NOT NULL,
   `username` varchar(20) NOT NULL,
-  `password` varchar(20) NOT NULL
+  `ntitle` varchar(200) NOT NULL,
+  `notice` varchar(5000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `logindetails`
+-- Dumping data for table `noticeboard`
 --
 
-INSERT INTO `logindetails` (`ID`, `username`, `password`) VALUES
-(1, 'admin', 'alakh'),
-(2, 'alakh', 'namdev'),
-(3, 'abhishek', 'kumar'),
-(4, 'aman', 'kumar'),
-(5, 'ayush', 'bariya'),
-(6, 'shubham', 'rawat'),
-(7, 'sukhman', 'singh');
+INSERT INTO `noticeboard` (`ID`, `username`, `ntitle`, `notice`) VALUES
+(4, 'admin', 'message 2 ', 'this is message is posted to let you know that notice board is live now but only admin post notice for now\r\n'),
+(5, 'admin', 'Inform', 'This notice is posted to let you know that delete notice option is live now and notices that you can post can now be deleted.\r\n'),
+(6, 'admin', 'sample message', 'this is to check delete is working or not\r\n');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `logindetails`
+-- Indexes for table `noticeboard`
 --
-ALTER TABLE `logindetails`
+ALTER TABLE `noticeboard`
   ADD PRIMARY KEY (`ID`,`username`);
 
 --
@@ -61,10 +58,10 @@ ALTER TABLE `logindetails`
 --
 
 --
--- AUTO_INCREMENT for table `logindetails`
+-- AUTO_INCREMENT for table `noticeboard`
 --
-ALTER TABLE `logindetails`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+ALTER TABLE `noticeboard`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

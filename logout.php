@@ -1,5 +1,11 @@
 <?php
 session_start();
-$_SESSION['username'] = $username;
-$_SESSION['password'] = $password;
+?>
+<script>
+    alert("<?php echo $_SESSION['username'];?> logged out successfully");
+    window.open("index.php","_self");
+</script>
+<?php
+session_unset();
+session_destroy();
 ?>

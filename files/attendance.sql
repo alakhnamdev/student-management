@@ -24,38 +24,43 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `marks`
+-- Table structure for table `attendance`
 --
 
-CREATE TABLE `marks` (
+CREATE TABLE `attendance` (
   `username` varchar(20) NOT NULL,
-  `maths` int(3) NOT NULL,
-  `english` int(3) NOT NULL,
-  `physics` int(3) NOT NULL,
-  `chemistry` int(3) NOT NULL,
-  `computer` int(3) NOT NULL
+  `session1` int(3) NOT NULL,
+  `session2` int(3) NOT NULL,
+  `session3` int(3) NOT NULL,
+  `session4` int(3) NOT NULL,
+  `session5` int(3) NOT NULL,
+  `attend1` int(3) NOT NULL,
+  `attend2` int(3) NOT NULL,
+  `attend3` int(3) NOT NULL,
+  `attend4` int(3) NOT NULL,
+  `attend5` int(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `marks`
+-- Dumping data for table `attendance`
 --
 
-INSERT INTO `marks` (`username`, `maths`, `english`, `physics`, `chemistry`, `computer`) VALUES
-('abhishek', 100, 93, 95, 91, 97),
-('alakh', 100, 99, 99, 99, 99),
-('aman ', 99, 100, 98, 97, 95),
-('ayush', 99, 99, 97, 92, 90),
-('shubham', 95, 100, 98, 92, 99),
-('sukhman', 98, 67, 70, 78, 92);
+INSERT INTO `attendance` (`username`, `session1`, `session2`, `session3`, `session4`, `session5`, `attend1`, `attend2`, `attend3`, `attend4`, `attend5`) VALUES
+('abhishek', 55, 38, 37, 42, 48, 41, 29, 29, 30, 38),
+('alakh', 55, 38, 37, 42, 48, 47, 36, 36, 40, 43),
+('aman', 55, 38, 37, 42, 48, 31, 30, 29, 38, 39),
+('ayush', 55, 38, 37, 42, 48, 42, 34, 24, 29, 36),
+('shubham', 55, 38, 37, 42, 48, 35, 29, 30, 35, 40),
+('sukhman', 55, 38, 37, 42, 48, 41, 29, 29, 36, 40);
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `marks`
+-- Indexes for table `attendance`
 --
-ALTER TABLE `marks`
+ALTER TABLE `attendance`
   ADD PRIMARY KEY (`username`);
 COMMIT;
 

@@ -1,9 +1,9 @@
 <?php
 $servername = "localhost";
-$hostname = "root";
+$username = "root";
 $password = "";
-$database = "mydatabase";
-$connector = mysqli_connect($servername,$hostname,$password,$database);
+$database = "erp";
+$connector = mysqli_connect($servername,$username,$password,$database);
 if(!$connector){
     die("Connection Failed".mysqli_connect_error());
 }
